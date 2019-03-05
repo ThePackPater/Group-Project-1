@@ -16,6 +16,10 @@
     .form-group {
         margin: 10px;
     }
+
+    .btn {
+        margin:10px;
+    }
 </style>
 
 <body>
@@ -29,23 +33,15 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th id="eName" scope="col">Employee Name</th>
-                        <th id="role" scope="col">Role</th>
-                        <th id="sDate" scope="col">Start Date</th>
-                        <th id="mWorked" scope="col">Months Worked</th>
-                        <th id="mRate" scope="col">Monthly Rate ($)</th>
-                        <th id="tBilled" scope="col">Total Billed ($)</th>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Months Worked</th>
+                        <th scope="col">Monthly Rate ($)</th>
+                        <th scope="col">Total Billed ($)</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td id="eNameData"></td>
-                        <td id="roleData"></td>
-                        <td id="mWorkedData"></td>
-                        <td id="mRateData"></td>
-                        <td id="tBilledData"></td>
-                    </tr>
+                <tbody id="employee-table">
                 </tbody>
             </table>
         </div>
@@ -69,6 +65,8 @@
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Monthly Rate</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="$0000.00">
+                </div>
+                <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
             </form>
         </div>
     </div>
