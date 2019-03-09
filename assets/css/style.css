@@ -2,15 +2,14 @@ body {
     background-color: #3e3e3e
 }
 
-.head {
-    text-align: center;
-    color: whitesmoke;
-}
 @font-face {
     font-family: misfits;
     src: url(MISFITS_.TTF);
   }
   
-  div {
+.head {
+    text-align: center;
+    color: whitesmoke;
     font-family: misfits;
-  }
+}
+
