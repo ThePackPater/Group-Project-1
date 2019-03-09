@@ -6,3 +6,11 @@ body {
     text-align: center;
     color: whitesmoke;
 }
+@font-face {
+    font-family: misfits;
+    src: url(MISFITS_.TTF);
+  }
+  
+  div {
+    font-family: misfits;
+  }
