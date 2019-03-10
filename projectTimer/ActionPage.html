@@ -16,8 +16,15 @@
   <title>ActionPage</title>
 
   <style>
-    .container-fluid {
+    body {
+      min-height: 100vh;
       background: url("run.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container-fluid {
+      background: none;
       background-repeat: no-repeat;
       background-size: cover;
       font-family: 'Permanent Marker', cursive;
@@ -65,12 +72,13 @@
       <div id="buttons">
         <button type="button" class="btn btn-success" id="start">RUN</button>
         <button type="button" class="btn btn-danger" id="stop">PAUSE</button>
-        <button type="button" class="btn btn-secondary" id="reset">RESET</button>
       </div>
     </div>
-    <div id="killerDiv"><h1 class="display-4"><b>RUN FOR YOUR LIFE!</b></h1></div>
-    
+    <div id="killerDiv">
+      <h1 class="display-4"><b>RUN FOR YOUR LIFE!</b></h1>
+    </div>
   </Div>
+
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

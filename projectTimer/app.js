@@ -18,11 +18,13 @@ class Killer {
 
 // new killer objects
 var Chucky = new Killer("Chucky", "15 min 3 attacks", "chucky.gif", 900);
-var Freddy = new Killer("Freddy Kruger", "25 min 4 attacks", "freddy.gif", 1500);
+var Freddy = new Killer("Freddy Kruger", "20 min 4 attacks", "freddy.gif", 1200);
+var Pennywise = new Killer("Pennywise the Clown", "25 min 5 attacks", "penny.gif", 1500);
+var LeatherFace = new Killer("Leather Face", "30 min 6 attack", "leatherFace.gif", 1800);
 
 //NEED TO CREATE a var to make the killer object var name (i.e. Chucky, Freddy) = chooseKiller btn click "click"
 
-// killer display and append
+// killer display and append var killer = ("killerChose").on("click").val;
 var killerDisplay = $("<div class='killer'>");
 var killerName = $("<h1>").text("You Chose: " + Chucky.name);
 killerDisplay.append(killerName);
@@ -36,12 +38,12 @@ $("#killerDiv").append(killerDisplay);
 // timer variables
 var intervalId;
 var clockRunning = false;
-var time = Chucky.time;
+var time = LeatherFace.time;
 var audioInterval;
 
 function reset() {
   //set's time equal to killer selection duration
-  time = Chucky.time;
+  time = LeatherFace.time;
   // "display" div
   $("#display").text("00:00");
 
