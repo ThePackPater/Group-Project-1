@@ -11,22 +11,38 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Googly Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+  <!-- other Googly Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <title>Stopwatch</title>
 
   <style>
+    .container-fluid {
+      background: url("run.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Permanent Marker', cursive;
+    }
+
+    #killerDiv {
+      object-position: center;
+      text-align: center;
+      color: antiquewhite;
+    }
+
     #display {
       font-family: 'Black Ops One', cursive;
       font-size: 120px;
-      color: green;
+      color: crimson;
       text-align: center;
       background: black;
     }
 
     #wrapper {
-      background-color: green;
+      background-color: black;
       border: 5px;
       width: 500px;
       margin: 50px auto 0;
+      padding: 10px;
     }
 
     #buttons {
@@ -41,15 +57,20 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="display">15:00</div>
-    <!-- timer controls -->
-    <div id="buttons">
-      <button id="start">Start</button>
-      <button id="stop">Stop</button>
-      <button id="reset">Reset</button>
+  <Div class="container-fluid">
+    <div id="wrapper">
+      <!-- time display -->
+      <div id="display">00:00</div>
+      <!-- timer controls -->
+      <div id="buttons">
+        <button type="button" class="btn btn-success" id="start">RUN</button>
+        <button type="button" class="btn btn-danger" id="stop">PAUSE</button>
+        <button type="button" class="btn btn-secondary" id="reset">RESET</button>
+      </div>
     </div>
-  </div>
+    <div id="killerDiv"><h1 class="display-4"><b>RUN FOR YOUR LIFE!</b></h1></div>
+    
+  </Div>
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
