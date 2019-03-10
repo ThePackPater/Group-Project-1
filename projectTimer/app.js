@@ -52,7 +52,7 @@ function start() {
   if (!clockRunning) {
     intervalId = setInterval(count, 1000);
     clockRunning = true;
-    setInterval(function () {
+    audioInterval = setInterval(function () {
       //setInterval to triggger audio mp3
       var audio = new Audio("http://soundfxcenter.com/holiday-and-festive/halloween/8d82b5_Chucky_Laugh_Sound_Effect.mp3");
       //play the audio file above every 3 (time=300) min
