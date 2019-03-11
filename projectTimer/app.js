@@ -1,10 +1,20 @@
 
+
+
+
+
+
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#stop").on("click", stop);
   $("#reset").on("click", reset);
   $("#start").on("click", start);
 };
+
+//NEED TO CREATE an onClick to make the killer object var name 
+
+//var killerChose = $(".killerchose").on("click").val();
+//console.log(killerChose);
 
 // Constructor function for Killer objects
 class Killer {
@@ -17,22 +27,23 @@ class Killer {
   }
 }
 
+
 // new killer objects
 var Chucky = new Killer("Chucky", "15 min 3 attacks", "assets/gifs/chucky.gif", 900, "assets/sounds/chucky.mp3");
 var Freddy = new Killer("Freddy Kruger", "20 min 4 attacks", "assets/gifs/freddy.gif", 1200, "assets/sounds/freddy.mp3");
 var Penny = new Killer("Pennywise the Clown", "25 min 5 attacks", "assets/gifs/penny.gif", 1500, "assets/sounds/penny.mp3");
 var LeatherFace = new Killer("Leather Face", "30 min 6 attack", "assets/gifs/leatherFace.gif", 1800, "assets/sounds/saw.mp3");
 var Jason = new Killer("Jason Vorhees", "35 min 7 attacks", "assets/gifs/jason.gif", 2100, "assets/sounds/jason.mp3");
+var Michael = new Killer("Michael Myers", "40 min 8 attacks", "assets/gifs/michael.gif", 2400, "assets/sounds/michael.mp3");
 
-//NEED TO CREATE a var to make the killer object var name (i.e. Chucky, Freddy) = chooseKiller btn click "click"
 
-// killer display and append var killer = (".killerChose-btn").on("click").val;
+// killer display and append 
 var killerDisplay = $("<div class='killer'>");
-var killerName = $("<h1>").text("You Chose: " + Jason.name);
+var killerName = $("<h1>").text("You Chose: " + Chucky.name);
 killerDisplay.append(killerName);
-var intensityP = $("<h2>").text(Jason.intensity);
+var intensityP = $("<h2>").text(Chucky.intensity);
 killerDisplay.append(intensityP);
-var killerImage = $("<img>").attr("src", Jason.image);
+var killerImage = $("<img>").attr("src", Chucky.image);
 killerDisplay.append(killerImage);
 $("#killerDiv").append(killerDisplay);
 
@@ -40,7 +51,7 @@ $("#killerDiv").append(killerDisplay);
 // timer variables
 var intervalId;
 var clockRunning = false;
-var time = Penny.time;
+var time = Chucky.time;
 var audioInterval;
 
 function reset() {
@@ -58,18 +69,16 @@ function start() {
     clockRunning = true;
     audioInterval = setInterval(function () {
       //setInterval to triggger audio mp3
-      var audio = new Audio(Jason.audio);
+      var audio = new Audio(Chucky.audio);
       //play the audio file above every 3 min
       audio.play();
       console.log("success");
       //60000*5
-    },   15000);
+    }, 15000);
   }
 }
 
-//NEED A FUNCTION TO PAUSE THE AUDIO INTERVAL!!!
-
- //stop/pause the count
+//stop/pause the count
 function stop() {
   clearInterval(intervalId);
   clearInterval(audioInterval);
