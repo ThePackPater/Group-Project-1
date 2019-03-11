@@ -28,11 +28,11 @@ var Jason = new Killer("Jason Vorhees", "35 min 7 attacks", "assets/gifs/jason.g
 
 // killer display and append var killer = (".killerChose-btn").on("click").val;
 var killerDisplay = $("<div class='killer'>");
-var killerName = $("<h1>").text("You Chose: " + Penny.name);
+var killerName = $("<h1>").text("You Chose: " + Jason.name);
 killerDisplay.append(killerName);
-var intensityP = $("<h2>").text(Penny.intensity);
+var intensityP = $("<h2>").text(Jason.intensity);
 killerDisplay.append(intensityP);
-var killerImage = $("<img>").attr("src", Penny.image);
+var killerImage = $("<img>").attr("src", Jason.image);
 killerDisplay.append(killerImage);
 $("#killerDiv").append(killerDisplay);
 
@@ -58,11 +58,12 @@ function start() {
     clockRunning = true;
     audioInterval = setInterval(function () {
       //setInterval to triggger audio mp3
-      var audio = new Audio(Penny.audio);
-      //play the audio file above every 3 (time=300) min
+      var audio = new Audio(Jason.audio);
+      //play the audio file above every 3 min
       audio.play();
       console.log("success");
-    }, 10000);
+      //60000*5
+    },   15000);
   }
 }
 
