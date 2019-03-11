@@ -12,7 +12,7 @@ var config = {
 
   database.ref().on("value", function(snapshot) {
     if (snapshot.exists()) {
-        $("#add-runner-btn").hide();
+        $("#add-runner-btn").hide();git 
         $("#start-run-btn").show();
       }else{
         $("#add-runner-btn").show();

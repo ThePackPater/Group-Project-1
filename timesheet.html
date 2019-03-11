@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>timesheet</title>
+
+</head>
+
+<style>
+    .form-group {
+        margin: 10px;
+    }
+
+    .btn {
+        margin:10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid" style="background-color:black; color: white; text-align: center;">
+            <h1 class="display-4">Employee Data Managment</h1>
+            <p class="lead">A Comprehensive Directory of Employee Billable Hours.</p>
+        </div>
+        <div class="card">
+            <div class="card-header"><b>Employee Log</b></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Months Worked</th>
+                        <th scope="col">Monthly Rate ($)</th>
+                        <th scope="col">Total Billed ($)</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-table">
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header"><b>Add Employee</b>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Employee Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Jon Smith">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Role</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="jb title">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Start Date</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="xx/xx/xxxx">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Monthly Rate</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="$0000.00">
+                </div>
+                <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
