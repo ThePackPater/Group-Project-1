@@ -23,7 +23,7 @@ class Killer {
 
 
 // new killer objects
-var Chucky = new Killer("Chucky", "15 min 3 attacks", "assets/gifs/chucky.gif", 50, "assets/sounds/chucky.mp3");
+var Chucky = new Killer("Chucky", "15 min 3 attacks", "assets/gifs/chucky.gif", 900, "assets/sounds/chucky.mp3");
 var Freddy = new Killer("Freddy Kruger", "20 min 4 attacks", "assets/gifs/freddy.gif", 1200, "assets/sounds/freddy.mp3");
 var Penny = new Killer("Pennywise the Clown", "25 min 5 attacks", "assets/gifs/penny.gif", 1500, "assets/sounds/penny.mp3");
 var LeatherFace = new Killer("Leather Face", "30 min 6 attack", "assets/gifs/leatherFace.gif", 1800, "assets/sounds/saw.mp3");
@@ -39,7 +39,7 @@ var intensityP = $("<h2>").text(Chucky.intensity);
 killerDisplay.append(intensityP);
 var killerImage = $("<img>").attr("src", Chucky.image);
 killerDisplay.append(killerImage);
-$("#killerDiv").append(killerDisplay);
+$("#killerDiv").preppend(killerDisplay);
 
 
 // timer variables
@@ -56,7 +56,6 @@ function endRun() {
     clockRunning = false;
     $("#display").text("YOU DID IT!");
   }
-  $("#quit").on("click").text("YOU DIED!");
   }
 
 //start the count
