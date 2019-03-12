@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--The Bootstrapary-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Googly Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+  <!-- other Googly Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <title>ActionPage</title>
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: url("assets/gifs/run.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+
+    .container-fluid {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Permanent Marker', cursive;
+    }
+
+    #killerDiv {
+      object-position: center;
+      text-align: center;
+      color: antiquewhite;
+    }
+
+    #display {
+      font-family: 'Black Ops One', cursive;
+      font-size: 120px;
+      color: crimson;
+      text-align: center;
+      background: black;
+    }
+
+    #wrapper {
+      background-color: black;
+      border: 5px;
+      width: 500px;
+      margin: 50px auto 0;
+      padding: 10px;
+    }
+
+    #buttons {
+      text-align: center;
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="wrapper">
+      <!-- time display -->
+      <div id="display">00:00</div>
+      <!-- timer controls -->
+      <div id="buttons">
+        <button type="button" class="btn btn-success" id="start">RUN</button>
+        <button type="button" class="btn btn-danger" id="stop">PAUSE</button>
+      </div>
+    </div>
+    <div id="killerDiv">
+      <h1 class="display-4"><b>RUN FOR YOUR LIFE!</b></h1>
+    </div>
+  </div>
+
+  
+
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- JS link -->
+  <script type="text/javascript" src="app.js"></script>
+
+
+
+</body>
+
+</html>
