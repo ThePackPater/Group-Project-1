@@ -1,8 +1,10 @@
 $(".btn-killer").click(function(){
   location.replace("ActionPage.html");
-  var killerChose=(this).val;
-  console.log(killerChose);
-});
+  });
+
+  $("#quit").click(function(){
+    location.replace("second.html");
+      });
 
 
 //action page onload function (timer buttons)
@@ -54,7 +56,7 @@ var clockRunning = false;
 var time = Chucky.time;
 var audioInterval;
 
-
+//this is the end countdown and it doesnt frakkin work!
 function endRun() {
   if (time === 0) {
     clearInterval(intervalId);

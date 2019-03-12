@@ -48,7 +48,7 @@ var clockRunning = false;
 var time = Chucky.time;
 var audioInterval;
 
-
+//this is the end countdown and it doesnt frakkin work!
 function endRun() {
   if (time === 0) {
     clearInterval(intervalId);
