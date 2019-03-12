@@ -3,7 +3,7 @@ $(".btn-killer").click(function(){
   });
 
   $("#quit").click(function(){
-    location.replace("second.html");
+    location.replace("endstats.html");
       });
 
 
