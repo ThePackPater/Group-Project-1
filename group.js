@@ -17,6 +17,7 @@ var config = {
       }else{
         $("#add-runner-btn").show();
         $("#start-run-btn").hide();
+        $("#")
       }
 
   }, function(errorObject) {
