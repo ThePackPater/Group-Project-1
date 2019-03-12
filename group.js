@@ -24,7 +24,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-}
+} //end slideshow JS
 
 var config = {
   apiKey: "AIzaSyClMUA_cxxS07psp6djaLnDvM8ISajX7-I",

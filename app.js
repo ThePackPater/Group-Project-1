@@ -1,13 +1,7 @@
 
-
-
-
-
-
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#stop").on("click", stop);
-  //$("#quit").on("click", endRun);
   $("#start").on("click", start);
 };
 
@@ -54,13 +48,16 @@ var clockRunning = false;
 var time = Chucky.time;
 var audioInterval;
 
-function reset() {
-  //set's time equal to killer selection duration
-  time = Penny.time;
-  // "display" div
-  $("#display").text("00:00");
 
-}
+function endRun() {
+  if (time === 0) {
+    clearInterval(intervalId);
+    clearInterval(audioInterval);
+    clockRunning = false;
+    $("#display").text("YOU DID IT!");
+  }
+  $("#quit").on("click").text("YOU DIED!");
+  }
 
 //start the count
 function start() {
@@ -111,5 +108,7 @@ function timeConverter(t) {
   console.log(t);
   return minutes + ":" + seconds;
 }
+
+
 
 

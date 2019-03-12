@@ -98,7 +98,7 @@ img {vertical-align: middle;}
   -webkit-animation-name: fade;
   -webkit-animation-duration: 0;
   animation-name: fade;
-  animation-duration: 120s;
+  animation-duration: 999s;
 }
 
 @-webkit-keyframes fade {
