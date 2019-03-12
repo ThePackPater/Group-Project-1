@@ -31,7 +31,7 @@ class Killer {
 
 
 // new killer objects
-var Chucky = new Killer("Chucky", "15 min 3 attacks", "assets/gifs/chucky.gif", 900, "assets/sounds/chucky.mp3");
+var Chucky = new Killer("Chucky", "15 min 3 attacks", "assets/gifs/chucky.gif", 30, "assets/sounds/chucky.mp3");
 var Freddy = new Killer("Freddy Kruger", "20 min 4 attacks", "assets/gifs/freddy.gif", 1200, "assets/sounds/freddy.mp3");
 var Penny = new Killer("Pennywise the Clown", "25 min 5 attacks", "assets/gifs/penny.gif", 1500, "assets/sounds/penny.mp3");
 var LeatherFace = new Killer("Leather Face", "30 min 6 attack", "assets/gifs/leatherFace.gif", 1800, "assets/sounds/saw.mp3");
@@ -39,7 +39,7 @@ var Jason = new Killer("Jason Vorhees", "35 min 7 attacks", "assets/gifs/jason.g
 var Michael = new Killer("Michael Myers", "40 min 8 attacks", "assets/gifs/michael.gif", 2400, "assets/sounds/michael.mp3");
 
 
-// killer display and append 
+// killer display and prepend 
 var killerDisplay = $("<div class='killer'>");
 var killerName = $("<h1>").text("You Chose: " + Chucky.name);
 killerDisplay.append(killerName);
@@ -49,23 +49,22 @@ var killerImage = $("<img>").attr("src", Chucky.image);
 killerDisplay.append(killerImage);
 $("#killerDiv").prepend(killerDisplay);
 
+// Killer Survived and preprend
+var killerSurvived = $("<div class='killer'>");
+var killerName = $("<h1>").text("You Survived " + Chucky.name);
+killerSurvived.append(killerName);
+var intensityP = $("<h2>").text(Chucky.intensity);
+killerSurvived.append(intensityP);
+var killerImage = $("<img>").attr("src", Chucky.image);
+killerSurvived.append(killerImage);
+$("#surviveDiv").prepend(killerSurvived);
+
 
 // timer variables
 var intervalId;
 var clockRunning = false;
 var time = Chucky.time;
 var audioInterval;
-
-//this is the end countdown and it doesnt frakkin work!
-function endRun() {
-  if (time === 0) {
-    clearInterval(intervalId);
-    clearInterval(audioInterval);
-    clockRunning = false;
-    $("#display").text("YOU DID IT!");
-  }
-  $("#quit").on("click").text("YOU DIED!");
-  }
 
 //start the count
 function start() {
@@ -117,6 +116,16 @@ function timeConverter(t) {
   return minutes + ":" + seconds;
 }
 
+//this is the end countdown and it doesnt frakkin work!
+function endRun() {
+  if (Chucky.time <= 0) {
+    clearInterval(intervalId);
+    clearInterval(audioInterval);
+    clockRunning = false;
+    $("#display").text("YOU DID IT!");
+  }
+}
+
 //slideshow JS
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -141,9 +150,11 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = " block";  
   dots[slideIndex-1].className += " active";
-} //end slideshow JS
+} 
+
+//end slideshow JS
 
 
 
