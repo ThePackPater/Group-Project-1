@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Css reset -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!--The Bootstrapary-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- Googly Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+  <!-- other Googly Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <title>ActionPage</title>
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: url("assets/gifs/run.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+
+    .container-fluid {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Permanent Marker', cursive;
+
+    }
+
+    #killerDiv {
+      object-position: center;
+      text-align: center;
+      color: antiquewhite;
+    }
+
+    #display {
+      font-family: 'Black Ops One', cursive;
+      font-size: 120px;
+      color: crimson;
+      text-align: center;
+      background: black;
+    }
+
+    #wrapper {
+      background-color: black;
+      width: 550px;
+      margin: 50px auto 0;
+      padding: 10px;
+
+    }
+
+    #buttons {
+      text-align: center;
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="wrapper">
+      <!-- time display -->
+      <div id="display">00:00</div>
+      <!-- timer controls -->
+      <div id="buttons">
+        <button type="button" class="btn btn-success" id="start">RUN</button>
+        <button type="button" class="btn btn-danger" id="stop">PAUSE</button>
+      </div>
+      <div id="killerDiv">
+        <h1 class="display-4"><b>RUN FOR YOUR LIFE!</b></h1>
+        <button type="button" value="quit" id="quit" class="btn-quit btn-danger btn-lg btn-block">QUIT & DIE!!</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Firebase JS -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <!-- JS link -->
+  <script type="text/javascript" src="group.js"></script>
+
+
+
+</body>
+
+</html>
