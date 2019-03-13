@@ -13,3 +13,14 @@ body {
     font-family: misfits;
 }
 
+<<<<<<< Updated upstream
+=======
+.container {
+	width: 100%;
+}
+.weather {
+    color: whitesmoke;
+}
+@media (min-width: 414px) and (max-width: 736px){
+}
+>>>>>>> Stashed changes
