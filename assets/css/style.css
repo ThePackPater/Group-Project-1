@@ -14,7 +14,9 @@ body {
     color: whitesmoke;
     font-family: misfits;
 }
-
+.card {
+    border: 0;
+}
 /* slideshow CSS */
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
