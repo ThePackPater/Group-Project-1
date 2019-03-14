@@ -1,13 +1,7 @@
 
-
-
-
-
-
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#stop").on("click", stop);
-  $("#reset").on("click", reset);
   $("#start").on("click", start);
 };
 
@@ -45,7 +39,7 @@ var intensityP = $("<h2>").text(Chucky.intensity);
 killerDisplay.append(intensityP);
 var killerImage = $("<img>").attr("src", Chucky.image);
 killerDisplay.append(killerImage);
-$("#killerDiv").append(killerDisplay);
+$("#killerDiv").preppend(killerDisplay);
 
 
 // timer variables
@@ -54,13 +48,15 @@ var clockRunning = false;
 var time = Chucky.time;
 var audioInterval;
 
-function reset() {
-  //set's time equal to killer selection duration
-  time = Penny.time;
-  // "display" div
-  $("#display").text("00:00");
-
-}
+//this is the end countdown and it doesnt frakkin work!
+function endRun() {
+  if (time === 0) {
+    clearInterval(intervalId);
+    clearInterval(audioInterval);
+    clockRunning = false;
+    $("#display").text("YOU DID IT!");
+  }
+  }
 
 //start the count
 function start() {
@@ -76,7 +72,7 @@ function start() {
       //60000*5
     }, 15000);
   }
-}
+ }
 
 //stop/pause the count
 function stop() {
@@ -111,5 +107,7 @@ function timeConverter(t) {
   console.log(t);
   return minutes + ":" + seconds;
 }
+
+
 
 
