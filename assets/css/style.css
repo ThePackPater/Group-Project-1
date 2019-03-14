@@ -38,6 +38,12 @@ body {
 
 }
 
+#newRunner {
+  background-color:  black;
+  color: crimson;
+  object-position: center;
+}
+
 
 /* Footer */
 html {
