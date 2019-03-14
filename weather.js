@@ -24,7 +24,7 @@
         // Transfer content to HTML
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
         $(".wind").text("Wind Speed: " + response.wind.speed);
-        $(".description").text("description: " + response.weather[0].description);
+        $(".description").text("Description: " + response.weather[0].description);
         $(".temp").text("Temperature (F) " + response.main.temp);
 
         // Log the data in the console as well
@@ -32,4 +32,5 @@
         console.log("description: " + response.main.description);
         console.log("Temperature (F): " + response.main.temp);
       });
+
 

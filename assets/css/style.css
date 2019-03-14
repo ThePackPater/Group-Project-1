@@ -20,7 +20,7 @@ html {
     flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
     padding: 20px;
   }
-  
+ 
   * {
     box-sizing: border-box;
   }
@@ -47,18 +47,34 @@ html {
       display: flex;
       justify-content: space-around;
   }
+
  .far {
      font-size: 40px;
  }
 
+ .far:hover {
+   color: rgb(143, 47, 47);
+ }
+
+ .far:active {
+   color: rgb(143, 47, 47);
+ }
  .fas {
      font-size: 40px;
  }
- .space {
-     height: 500px;
-     margin-top: 1100px;
+
+ .fas:hover {
+   color: rgb(143, 47, 47);
  }
- 
+
+ .fas:active {
+   color: rgb(143, 47, 47);
+ }
+
+ .space {
+     margin-top: 100px;
+ }
+
 
   /* end footer */
 

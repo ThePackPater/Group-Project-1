@@ -25,7 +25,26 @@ function geoFindMe() {
       status.textContent = 'Locating…';
       navigator.geolocation.getCurrentPosition(success, error);
     }
-  
+   
   }
   
-  document.querySelector('#find-me').addEventListener('click', geoFindMe);
+    document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+    $("document").ready(function() {
+      setTimeout(function() {
+          $("#find-me").trigger('click');
+      },10);
+      
+      
+      function show() {
+        console.log(cordinates.latitude);
+        
+        
+      }
+      setTimeout(function() { show(); }, 5000);
+    });
+
+
+
+  
+ 
