@@ -1,5 +1,8 @@
 body {
-  background:rgb(23, 24, 24);
+  min-height: 100vh;
+  background: url("assets/gifs/run.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
  
 }
 
