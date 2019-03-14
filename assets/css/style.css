@@ -6,6 +6,13 @@ body {
   src: url(MISFITS_.TTF);
 }
 
+/* endstats page */
+
+#endStats {
+  font-family: misfits;
+  src: url(MISFITS_.TTF);
+}
+
 /* action page */
 
 #actionDiv {
