@@ -1,95 +1,98 @@
 body {
-    background:rgb(23, 24, 24);
-   
+  min-height: 100vh;
+  background: url("run.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
 }
 
 /* Footer */
 html {
-    height: 100%;
-  }
-  body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+}
+h1 {
+  margin: 0 0 20px 0;
+}
+p {
+  margin: 0 0 20px 0;
+}
+footer {
+  background: rgb(255, 255, 255);
+  color: rgb(61, 61, 61);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#main {
     display: flex;
-    flex-direction: column;
-    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-  }
-  .content {
-    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-    padding: 20px;
-  }
-  .footer {
-    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-    padding: 20px;
-  }
- 
-  * {
-    box-sizing: border-box;
-  }
+    justify-content: space-around;
+}
 
-  body {
-    margin: 0;
-    font: 16px Sans-Serif;
-  }
-  h1 {
-    margin: 0 0 20px 0;
-  }
-  p {
-    margin: 0 0 20px 0;
-  }
-  footer {
-    background: rgb(255, 255, 255);
-    color: rgb(61, 61, 61);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+.far {
+   font-size: 40px;
+}
 
-  #main {
-      display: flex;
-      justify-content: space-around;
-  }
+.far:hover {
+ color: rgb(143, 47, 47);
+}
 
- .far {
-     font-size: 40px;
- }
+.far:active {
+ color: rgb(143, 47, 47);
+}
+.fas {
+   font-size: 40px;
+}
 
- .far:hover {
-   color: rgb(143, 47, 47);
- }
+.fas:hover {
+ color: rgb(143, 47, 47);
+}
 
- .far:active {
-   color: rgb(143, 47, 47);
- }
- .fas {
-     font-size: 40px;
- }
+.fas:active {
+ color: rgb(143, 47, 47);
+}
 
- .fas:hover {
-   color: rgb(143, 47, 47);
- }
-
- .fas:active {
-   color: rgb(143, 47, 47);
- }
-
- .space {
-     margin-top: 100px;
- }
+.space {
+   margin-top: 100px;
+}
 
 
-  /* end footer */
+/* end footer */
 
 @font-face {
-    font-family: misfits;
-    src: url(MISFITS_.TTF);
-  }
-  
+  font-family: misfits;
+  src: url(MISFITS_.TTF);
+}
+
 .head {
-    text-align: center;
-    color: whitesmoke;
-    font-family: misfits;
+  text-align: center;
+  color: whitesmoke;
+  font-family: misfits;
 }
 .card {
-    border: 0;
+  border: 0;
 }
 /* slideshow CSS */
 * {box-sizing: border-box}
@@ -99,114 +102,114 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  font-family: 'Permanent Marker', cursive;
-  font-size: xx-large;
-  margin: auto;
+max-width: 1000px;
+position: relative;
+font-family: 'Permanent Marker', cursive;
+font-size: xx-large;
+margin: auto;
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(241, 83, 83, 0.8);
+background-color: rgba(241, 83, 83, 0.8);
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0;
-  animation-name: fade;
-  animation-duration: 999s;
+-webkit-animation-name: fade;
+-webkit-animation-duration: 0;
+animation-name: fade;
+animation-duration: 999s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: 1} 
-  to {opacity: 1}
+from {opacity: 1} 
+to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: 1} 
-  to {opacity: 1}
+from {opacity: 1} 
+to {opacity: 1}
 }
 
 #surviveDiv {
-  background: black;
-  object-position: center;
-  text-align: center;
-  color: crimson;
+background: black;
+object-position: center;
+text-align: center;
+color: crimson;
 }
 
 img {
-  height: 500px; width: 100%;
+height: 500px; width: 100%;
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+.prev, .next,.text {font-size: 11px}
 }
 
 .container {
-	width: 100%;
+width: 100%;
 }
 .weather {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 @media (min-width: 414px) and (max-width: 736px){
 }
