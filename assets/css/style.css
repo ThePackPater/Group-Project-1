@@ -2,7 +2,8 @@ body {
   background: url("run.gif");
   background-repeat: no-repeat;
   background-size:  cover;
- 
+  font-family: misfits;
+  src: url(MISFITS_.TTF);
 }
 
 /* action page */
