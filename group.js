@@ -22,7 +22,6 @@ $("#quit").click(function () {
 });
 
 
-
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#stop").on("click", stop);
@@ -99,6 +98,7 @@ function start() {
   console.log(lat1 + long1);
   }
 
+}
 
 //stop/pause the count
 function stop() {
@@ -214,6 +214,7 @@ $("#add-runner-btn").on("click", function (event) {
   }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
   });
+
 
   database.ref().push(newRunner);
 
