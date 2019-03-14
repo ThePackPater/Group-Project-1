@@ -8,7 +8,7 @@ $("#quit").click(function () {
 
 //action page onload function (timer buttons)
 window.onload = function () {
-  $("#stop").on("click", stop);
+  $("#pause").on("click", pause);
   $("#start").on("click", start);
 };
 
@@ -79,7 +79,7 @@ function start() {
 }
 
 //stop/pause the count
-function stop() {
+function pause() {
   clearInterval(intervalId);
   clearInterval(audioInterval);
   clockRunning = false;
