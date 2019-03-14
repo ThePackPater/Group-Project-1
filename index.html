@@ -29,117 +29,123 @@
 
 <body>
 
-  <!-- Navbar -->
-  <div class="container">
+  <!-- Navbar <div class="container">
     <nav class="navbar">
 
       <a href="index.html" class="navbar-brand"><span style="color:white; font-size: 2em;" class="fas fa-home"></span>
       </a>
-    </nav>
-    <h1 class="head">Run For Your Life</h1>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-4">
-          <!-- <button class="btn btn-primary" id="start-run-btn">Start Run</button> -->
-          <div class="card-body">
-            <!-- Entry Form -->
-            <form>
-              <div class="form-group" id="new-runner">
-                <label for="runner-name-input">Name</label>
-                <input class="form-control" id="name-input" placeholder="" type="text">
-                <br>
-                <!-- Add Runner  -->
-                <button class="btn btn-primary" id="add-runner-btn">Submit</button>
-              </div>
-            </form>
+    </nav> -->
+
+
+  <div class="container-fluid" id="startDiv">
+    <div class="container" id="newRunner">
+      <h1 class="head">Run For Your Life</h1>
+      <hr class="my-4">
+      <!-- Entry Form -->
+      <form class="form">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Runner Name</span>
           </div>
+          <input type="text" class="form-control"  id="name-input">
+          <!-- <input type="password" class="mb-10"  placeholder="Runner Name"> -->
+          <button class="btn btn-danger btn-lg" id="add-runner-btn">Submit</button>
         </div>
+      </form>
+      <hr class="my-4">
+    </div>
+    <!-- Choose your killer Slideshow container -->
+    <div class="slideshow-container">
+      <h1 class="head">Choose your Killer</h1>
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="assets/images/chucky.jpg" style="height: 500px; width: 100%;">
+        <button type="button" value="Chucky" id="Chucky" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: CHUCKY:
+          15
+          min 3
+          attacks</button>
       </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="assets/images/freddy.jpg" style="height: 500px; width: 100%;">
+        <button type="button" value="Freddy" id="Freddy" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: FREDDY
+          KRUGER: 15
+          min 3 attacks</button>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="assets/images/penny.jpg" style="height: 500px; width: 100%;">
+        <button type="button" value="Penny" id="Penny" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: PENNYWISE
+          the CLOWN:
+          25 minutes 5 attacks!</button>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="assets/images/leatherface.jpg" style="height: 500px; width: 100%;">
+        <button type="button" value="Leatherface" id="Leatherface"
+          class="btn-killer btn-danger btn-lg btn-block">CHOOSE:
+          LEATHERFACE: 30 minutes 6 attacks!</button>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="assets/images/jason.jpg" style="height: 500px; width: 100%;">
+        <button type="button" value="Jason" id="Jason" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: JASON
+          VORHEES: 35
+          minutes 7 attacks!</button>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="assets/images/michaelAsset 1.png" style="height: 500px; width: 100%;">
+        <button type="button" value="Michael" id="Michael" class="btn-killer btn-danger btn-lg btn-block">CHOOSE:
+          MICHAEL
+          MYERS:
+          40 minutes 8 attacks!</button>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-  </div>
-
-  <!-- Choose your killer Slideshow container -->
-  <div class="slideshow-container">
-    <h1 class="head">Choose your Killer</h1>
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 6</div>
-      <img src="assets/images/chucky.jpg" style="height: 500px; width: 100%;">
-      <button type="button" value="Chucky" id="Chucky" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: CHUCKY: 15 min 3
-        attacks</button>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 6</div>
-      <img src="assets/images/freddy.jpg" style="height: 500px; width: 100%;">
-      <button type="button" value="Freddy" id="Freddy" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: FREDDY KRUGER: 15
-        min 3 attacks</button>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 6</div>
-      <img src="assets/images/penny.jpg" style="height: 500px; width: 100%;">
-      <button type="button" value="Penny" id="Penny" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: PENNYWISE the CLOWN:
-        25 minutes 5 attacks!</button>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">4 / 6</div>
-      <img src="assets/images/leatherface.jpg" style="height: 500px; width: 100%;">
-      <button type="button" value="Leatherface" id="Leatherface"
-        class="btn-killer btn-danger btn-lg btn-block">CHOOSE: LEATHERFACE: 30 minutes 6 attacks!</button>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">5 / 6</div>
-      <img src="assets/images/jason.jpg" style="height: 500px; width: 100%;">
-      <button type="button" value="Jason" id="Jason" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: JASON VORHEES: 35
-        minutes 7 attacks!</button>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">6 / 6</div>
-      <img src="assets/images/michaelAsset 1.png" style="height: 500px; width: 100%;">
-      <button type="button" value="Michael" id="Michael" class="btn-killer btn-danger btn-lg btn-block">CHOOSE: MICHAEL MYERS:
-        40 minutes 8 attacks!</button>
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-  </div>
-
-  <br>
-  <div class="space"></div>
-  <br>
-<!-- Footer -->
-<footer class="footer">
-    <div id="main">
-      
-      <a href="#" class="text-muted"> <i class="far fa-calendar-alt"></i></a>
-
-      <a href="#" class="text-muted"> <i class="fas fa-map-marker-alt"></i></a>
-
-      <a href="weather.html" class="text-muted"> <i class="fas fa-cloud-rain"></i></a>
-
-      <a href="weather.html" class ="text-muted"> <i class="fas fa-user"></i></a>
-
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
     </div>
 
-  </footer>  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-  <script src="group.js" type="text/javascript"></script>
+    <br>
+    <div class="space"></div>
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div id="main">
+
+        <a href="#" class="text-muted"> <i class="far fa-calendar-alt"></i></a>
+
+        <a href="#" class="text-muted"> <i class="fas fa-map-marker-alt"></i></a>
+
+        <a href="weather.html" class="text-muted"> <i class="fas fa-cloud-rain"></i></a>
+
+        <a href="weather.html" class="text-muted"> <i class="fas fa-user"></i></a>
+
+      </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="group.js" type="text/javascript"></script>
 
 </body>
 
