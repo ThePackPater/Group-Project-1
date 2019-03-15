@@ -73,11 +73,12 @@ $("#quit").click(function () {
   
 });
 
+
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#pause").on("click", pause);
-  //$("#start").on("click", start);  
-  //});
+  $("#start").on("click", start);  
+ 
 };
 
 // Constructor function for Killer objects
