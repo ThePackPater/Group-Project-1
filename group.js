@@ -12,6 +12,22 @@ window.onload = function () {
   $("#start").on("click", start);
 };
 
+/*var currentKiller;
+
+function killerChose(killer) {
+  console.log(killer)
+  currentKiller=killer;
+}
+
+$(".btn-killer").click(function () {
+$("#action").show();
+$("#start").hide();
+var killer = $(this).val();
+  //location.replace("ActionPage.html");
+  killerChose(killer)
+});*/
+
+
 // Constructor function for Killer objects
 class Killer {
   constructor(name, intensity, image, time, audio, pic) {
@@ -179,17 +195,18 @@ $("#add-runner-btn").on("click", function (event) {
 
   $("#name-input").val("");
 
-  database.ref().on("value", function (snapshot) {
+ 
+  database.ref().on("child_added", function (childSnapshot) {
 
-    console.log(snapshot);
-  
-    $("#userInfo").append(snapshot).val();
-  
+    var runner = (childSnapshot.val().name);
+
+    console.log(runner);
+
+    $("#userInfo").append(runner);
+
     $("#add-runner-btn").on("click").hide();
-  
-  
-  });
 
+  });
 
 });
 
