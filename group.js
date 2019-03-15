@@ -1,15 +1,84 @@
+var currentLoc = {currentLat : "",
+                  currentLong : ""};
+var lat1;
+var lat2;
+var lon1;
+var lon2;
+
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1); 
+  var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+     
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(position) {
+  var getLat;
+  var getLong;
+  
+  getLat = position.coords.latitude;
+  getLong = position.coords.longitude;
+  
+  currentLoc.currentLat = getLat;
+  currentLoc.currentLong = getLong;
+  //console.log(currentLoc);
+}
+
+getLocation();
+
+$("#start" ).click(function() {  
+  lat1 = currentLoc.currentLat;
+  lon1 = currentLoc.currentLong;
+  console.log(lat1 + " " + lon1 + "from start");
+  start();
+});              
+                  
+                  
 $(".btn-killer").click(function () {
   location.replace("ActionPage.html");
 });
 
 $("#quit").click(function () {
+  var distance;
+  lat2 = currentLoc.currentLat;
+  lon2 = currentLoc.currentLong;
+  console.log(lat2 + " " + lon2 + "from quit");
+  distance = getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2);
+  console.log(distance + " distance");
+  var addDistanceStat = $("<div>");
+  addDistanceStat.val(distance);
+  
   location.replace("endstats.html");
+  $("#userInfo").append(addDistanceStat);
+  
 });
+
 
 //action page onload function (timer buttons)
 window.onload = function () {
   $("#pause").on("click", pause);
-  $("#start").on("click", start);
+  $("#start").on("click", start);  
+ 
 };
 
 /*var currentKiller;
@@ -80,7 +149,9 @@ var audioInterval;
 
 //start the count
 function start() {
+  
   if (!clockRunning) {
+    
     intervalId = setInterval(count, 1000);
     clockRunning = true;
     audioInterval = setInterval(function () {
