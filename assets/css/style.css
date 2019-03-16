@@ -247,12 +247,20 @@ animation-duration: 999s;
   margin-left: 10%;
   margin-right:10%;
 }
+
 .card-img {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+  margin: 20px;
 }
 
+.survivalhead {
+  margin-bottom: 10px;
+}
+
+.survivalrate {
+}
 
 @-webkit-keyframes fade {
 from {opacity: 1} 
