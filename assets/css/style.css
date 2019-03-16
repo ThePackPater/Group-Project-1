@@ -1,10 +1,57 @@
 body {
-  min-height: 100vh;
   background: url("run.gif");
   background-repeat: no-repeat;
-  background-size: cover;
- 
+  background-size:  cover;
+  width: 100%;
+  height: 100vh;
+  font-family: misfits;
+  src: url(MISFITS_.TTF);
 }
+
+/* endstats page */
+
+#endStats {
+  font-family: misfits;
+  src: url(MISFITS_.TTF);
+}
+
+/* action page */
+
+#actionDiv {
+  background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+#killerDiv {
+  object-position: center;
+  text-align: center;
+  color: antiquewhite;
+}
+
+#display {
+  font-family: 'Black Ops One', cursive;
+  font-size: 7.5rem;
+  color: crimson;
+  text-align: center;
+  background: black;
+}
+
+#wrapper {
+  background-color: black;
+   margin:  50px auto 0;
+  padding: 10px;
+
+}
+
+#newRunner {
+  background-color:  black;
+  color: crimson;
+  object-position: center;
+}
+
 
 /* Footer */
 html {
@@ -109,6 +156,14 @@ font-size: xx-large;
 margin: auto;
 }
 
+.mySlides {
+  text-align: center;
+}
+.slideimg {
+height: 100%;
+max-width: 500px;
+}
+
 /* Next & previous buttons */
 .prev, .next {
 cursor: pointer;
@@ -125,6 +180,11 @@ border-radius: 0 3px 3px 0;
 user-select: none;
 }
 
+/* Slide buttons more visible, overrides color:inherit */
+a:not([href]):not([tabindex]) {
+  color: #f2f2f2;
+}
+
 /* Position the "next button" to the right */
 .next {
 right: 0;
@@ -132,6 +192,7 @@ border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
+
 .prev:hover, .next:hover {
 background-color: rgba(241, 83, 83, 0.8);
 }
@@ -180,6 +241,19 @@ animation-name: fade;
 animation-duration: 999s;
 }
 
+/* User page styles */
+.card {
+  width: 80%;
+  margin-left: 10%;
+  margin-right:10%;
+}
+.card-img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+
 @-webkit-keyframes fade {
 from {opacity: 1} 
 to {opacity: 1}
@@ -198,7 +272,7 @@ color: crimson;
 }
 
 img {
-height: 500px; width: 100%;
+height: 400px; width: 100%;
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {

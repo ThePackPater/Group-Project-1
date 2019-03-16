@@ -72,18 +72,13 @@ $("#quit").click(function () {
   $("#userInfo").append(addDistanceStat);
   
 });
-$(".btn-killer").click(function () {
-  location.replace("ActionPage.html");
-});
 
-/*$("#quit").click(function () {
-  location.replace("endstats.html");
-});*/
 
 //action page onload function (timer buttons)
 window.onload = function () {
-  $("#stop").on("click", stop);
-  //$("#start").on("click", start);
+  $("#pause").on("click", pause);
+  $("#start").on("click", start);  
+ 
 };
 
 // Constructor function for Killer objects
@@ -138,7 +133,9 @@ var audioInterval;
 
 //start the count
 function start() {
+  
   if (!clockRunning) {
+    
     intervalId = setInterval(count, 1000);
     clockRunning = true;
     audioInterval = setInterval(function () {
@@ -153,7 +150,7 @@ function start() {
 }
 
 //stop/pause the count
-function stop() {
+function pause() {
   clearInterval(intervalId);
   clearInterval(audioInterval);
   clockRunning = false;

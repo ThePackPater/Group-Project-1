@@ -34,7 +34,7 @@ function geoFindMe() {
     $("document").ready(function() {
       setTimeout(function() {
           $("#find-me").trigger('click');
-      },10);
+      });
       
     })
 
