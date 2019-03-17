@@ -1,9 +1,9 @@
 body {
-  background: url("run.gif");
+  background: url("run.gif") no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size:  cover;
-  width: 100%;
-  height: 100vh;
+  
+  height: 100%;
   font-family: misfits;
   src: url(MISFITS_.TTF);
 }
@@ -68,7 +68,7 @@ body {
 }
 .footer {
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 20px;
+  padding: 10px;
 }
 
 * {
@@ -99,7 +99,7 @@ footer {
 }
 
 .far {
-   font-size: 40px;
+   font-size: 30px;
 }
 
 .far:hover {
@@ -110,7 +110,7 @@ footer {
  color: rgb(143, 47, 47);
 }
 .fas {
-   font-size: 40px;
+   font-size: 30px;
 }
 
 .fas:hover {
@@ -156,6 +156,14 @@ font-size: xx-large;
 margin: auto;
 }
 
+.mySlides {
+  text-align: center;
+}
+.slideimg {
+height: 100%;
+max-width: 500px;
+}
+
 /* Next & previous buttons */
 .prev, .next {
 cursor: pointer;
@@ -172,6 +180,11 @@ border-radius: 0 3px 3px 0;
 user-select: none;
 }
 
+/* Slide buttons more visible, overrides color:inherit */
+a:not([href]):not([tabindex]) {
+  color: #f2f2f2;
+}
+
 /* Position the "next button" to the right */
 .next {
 right: 0;
@@ -179,6 +192,7 @@ border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
+
 .prev:hover, .next:hover {
 background-color: rgba(241, 83, 83, 0.8);
 }
@@ -225,6 +239,27 @@ background-color: #717171;
 -webkit-animation-duration: 0;
 animation-name: fade;
 animation-duration: 999s;
+}
+
+/* User page styles */
+.card {
+  width: 80%;
+  margin-left: 10%;
+  margin-right:10%;
+}
+
+.card-img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+.survivalhead {
+  margin-bottom: 10px;
+}
+
+.survivalrate {
 }
 
 @-webkit-keyframes fade {
